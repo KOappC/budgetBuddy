@@ -1,11 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700i|Rubik:400,700,900');
+
+/* 
+
+*/
 
 nav {
-    display: inline-block;
+    display: flex;
     height: 100px;
     width: 100%;
-    background-color: rgb(18, 59, 18);
-
+    background-color:  #165933;
 }
+
+.entertainment, .food, .clothing, .bills, .other {
+    display: flex;
+    font-family: 'Rubik', sans-serif;
+    font-size: 24px;
+}
+
 
 
 
