@@ -3,18 +3,52 @@
 /* 
 
 */
+body {
+    background-color: #7AA670;
+    font-family: 'Rubik', sans-serif;
+}
 
 nav {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin-left: 5%;
+    margin-right: 5%; */
     height: 100px;
     width: 100%;
-    background-color:  #165933;
+    color: #FFFFBB;
+    font-size: 36px;
+}
+
+.entertainment:hover, .food:hover, .clothing:hover, .bills:hover, .other:hover {
+    color: gray;
 }
 
 .entertainment, .food, .clothing, .bills, .other {
     display: flex;
+    justify-content: flex-start;
     font-family: 'Rubik', sans-serif;
     font-size: 24px;
+    color: #FFFFBB;
+    justify-content: space-between;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 2%;
+}
+
+.budgetList {
+    display: flex;
+    
+}
+
+#listText {
+    background-color: #D9D7C5;
+    margin: 5%;
+    width: 100%;
+    height: 200px;
+    border-radius: 4%;
+    box-shadow: inset 0px 0px 68px -26px rgba(0,0,0,0.5);
+    
 }
 
 
