@@ -31,7 +31,7 @@ $(document).ready(function () {
     });
 
     // submit budget items button
-    $("#submit").on("click", function(event){
+    $("#submit").on("click", function(){
        typeInput = $("#typeInput");
        nameInput = $("#nameInput");
        amountInput = $("#amountInput");
@@ -54,11 +54,11 @@ $(document).ready(function () {
                amount: amountInput.val(),
                type: typeInput.val()
            });
+           $("#entertainmentFilter").append("<li>" + nameInput.val() + " " + amountInput.val() + "</li>");
+
        }
 
        console.log(entertainmentFilter);
-       console.log(stuff);
-
 
 
        $(".budgetAmount").text(budget);

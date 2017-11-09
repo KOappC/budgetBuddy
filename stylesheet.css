@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700i|Rubik:400,700,900');
+
 /* GENERAL STYLES */
+
 body {
     background-color: #7AA670;
     font-family: 'Rubik', sans-serif;
 }
+
 nav {
     display: flex;
     align-items: center;
@@ -16,9 +19,11 @@ nav {
     color: #FFFFBB;
     font-size: 36px;
 }
+
 #entertainment:hover, #food:hover, #clothing:hover, #bills:hover, #other:hover {
     color: gray;
 }
+
 #entertainment, #food, #clothing, #bills, #other {
     display: flex;
     justify-content: flex-start;
@@ -30,11 +35,14 @@ nav {
     margin-left: 5%;
     margin-bottom: 2%;
 }
+
 /*LIST STYLES*/
+
 .budgetList {
     display: flex;
     flex-direction: column;
 }
+
 #listText {
     background-color: #D9D7C5;
     margin: 5%;
@@ -44,7 +52,28 @@ nav {
     border-radius: 2%;
     box-shadow: inset 0px 0px 68px -26px rgba(0,0,0,0.5);
 }
+
+#entertainmentFilter {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10%;
+    right: -11%;
+    background-color: #D9D7C5;
+    margin: 5%;
+    width: 100%;
+    min-height: 200px;
+    padding: 5px;
+    border-radius: 2%;
+    box-shadow: inset 0px 0px 68px -26px rgba(0,0,0,0.5);
+}
+
+#entertainmentFilter li {
+    margin-left: 7%;
+}
+
 /*FORM STYLES*/
+
 .popOutForm{
     position: absolute;
     top: 13%;
@@ -58,6 +87,7 @@ nav {
     box-shadow: 0px 0px 31px 1px rgba(0,0,0,0.3);
     display: none;
 }
+
 input, button{
     margin: 2%;
     padding: 2%;
@@ -66,19 +96,23 @@ input, button{
     border-bottom: 1px solid #7AA670;
     /*  font-family: 'Rubik', sans-serif;*/
 }
+
 button{
     margin-top: 5%;
     border-bottom: none;
     background-color: #7AA670;
     color: #FFFFBB;
 }
+
 button:hover{
     background-color: beige;
     color: #7AA670;
 }
+
 .closeForm:hover{
     color: red;
 }
+
 .closeForm{
     text-align: right;
     position: absolute;
@@ -86,6 +120,7 @@ button:hover{
     right: 5px;
     font-family: Material Icons;
 }
+
 #typeInput{
     margin-top: 10%;
     border-bottom: none;
