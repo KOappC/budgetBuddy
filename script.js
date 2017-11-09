@@ -40,6 +40,18 @@ $(document).ready(function () {
        });
 
 
+        for (var i = 0; i < stuff.length; i++) {
+            if (stuff[i].type === "entertainment") {
+                entertainmentFilter.push(stuff[i]);
+            }
+        }
+
+
+
+       console.log(stuff);
+       console.log(entertainmentFilter);
+
+
        $(".budgetAmount").text(budget);
 
 
@@ -50,6 +62,11 @@ $(document).ready(function () {
         nameInput.val("");
         amountInput.val("");
     });
+
+    var entertainmentFilter = [];
+
+
+
 
 
 }); // Closing of document
