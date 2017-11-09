@@ -5,11 +5,14 @@ $(document).ready(function () {
     var amountInput;
     var budget = 800;
     var stuff = [];
+    var categoryName;
 // open form and close form
     $(".budgetAmount").text(budget);
 
     $(".select").on("click", function(event){
+        categoryName = $(this).attr("id");
         $(".popOutForm").css("display","flex");
+        $("#typeInput").val(categoryName);
     });
 
     $(".closeForm").on("click", function(event){
