@@ -33,6 +33,7 @@ nav {
 /*LIST STYLES*/
 .budgetList {
     display: flex;
+    flex-direction: column;
 }
 #listText {
     background-color: #D9D7C5;

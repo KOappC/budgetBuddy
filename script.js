@@ -4,8 +4,9 @@ $(document).ready(function () {
     var nameInput;
     var amountInput;
     var budget = 800;
-
+    var stuff = [];
 // open form and close form
+    $(".budgetAmount").text(budget);
 
     $(".select").on("click", function(event){
         $(".popOutForm").css("display","flex");
@@ -16,8 +17,37 @@ $(document).ready(function () {
     });
 
     $("button").on("click", function(event){
-        
+       typeInput = $("#typeInput");
+       nameInput = $("#nameInput");
+       amountInput = $("#amountInput");
+
+
+       // displaying text into div
+       $("#listText").append(typeInput.val() + " " + nameInput.val() + " $" + amountInput.val());
+       $(".popOutForm").css("display", "none");
+       budget -= amountInput.val();
+
+       //pushing form object into stuff array
+       stuff.push({
+           name: nameInput.val(),
+           amount: amountInput.val(),
+           type: typeInput.val()
+       });
+
+       console.log(stuff);
+
+
+       $(".budgetAmount").text(budget);
+
+
+       if (budget < 0) {
+           $(".budgetAmount").css("color", "red");
+       }
+        typeInput.val("");
+        nameInput.val("");
+        amountInput.val("");
     });
+
 
 }); // Closing of document
 
