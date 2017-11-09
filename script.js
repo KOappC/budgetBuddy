@@ -1,5 +1,23 @@
 $(document).ready(function () {
 
+    var typeInput;
+    var nameInput;
+    var amountInput;
+    var budget = 800;
+
+// open form and close form
+
+    $(".select").on("click", function(event){
+        $(".popOutForm").css("display","flex");
+    });
+
+    $(".closeForm").on("click", function(event){
+        $(".popOutForm").css("display", "none");
+    });
+
+    $("button").on("click", function(event){
+        
+    });
 
 }); // Closing of document
 

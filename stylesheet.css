@@ -16,10 +16,10 @@ nav {
     color: #FFFFBB;
     font-size: 36px;
 }
-.entertainment:hover, .food:hover, .clothing:hover, .bills:hover, .other:hover {
+#entertainment:hover, #food:hover, #clothing:hover, #bills:hover, #other:hover {
     color: gray;
 }
-.entertainment, .food, .clothing, .bills, .other {
+#entertainment, #food, #clothing, #bills, #other {
     display: flex;
     justify-content: flex-start;
     font-family: 'Rubik', sans-serif;
@@ -54,6 +54,7 @@ nav {
     padding: 1%;
     border-radius: 2%;
     box-shadow: 0px 0px 31px 1px rgba(0,0,0,0.3);
+    display: none;
 }
 input, button{
     margin: 2%;
