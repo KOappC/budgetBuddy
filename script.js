@@ -7,6 +7,9 @@ $(document).ready(function () {
     var stuff = [];
     var categoryName;
     var entertainmentFilter = [];
+    var totalEntertainment = 0;
+
+
 
     // modal functionality
     $("#modalButton").on("click", function(event){
@@ -55,7 +58,8 @@ $(document).ready(function () {
                type: typeInput.val()
            });
            $("#entertainmentFilter").append("<li>" + nameInput.val() + " " + amountInput.val() + "</li>");
-
+           totalEntertainment += Number(amountInput.val());
+           $("#totalEntertainment").text("$" + totalEntertainment);
        }
 
        console.log(entertainmentFilter);
@@ -67,9 +71,14 @@ $(document).ready(function () {
        if (budget < 0) {
            $(".budgetAmount").css("color", "red");
        }
+
+
+
         typeInput.val("");
         nameInput.val("");
         amountInput.val("");
+
+        console.log(totalEntertainment);
     });
 
 
