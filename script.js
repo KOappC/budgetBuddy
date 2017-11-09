@@ -6,6 +6,7 @@ $(document).ready(function () {
     var budget = 800;
     var stuff = [];
     var categoryName;
+    var entertainmentFilter = [];
 
 // open form and close form
     $(".budgetAmount").text(budget);
@@ -39,17 +40,17 @@ $(document).ready(function () {
            type: typeInput.val()
        });
 
+       if(typeInput.val() === "entertainment"){
+           entertainmentFilter.push({
+               name: nameInput.val(),
+               amount: amountInput.val(),
+               type: typeInput.val()
+           });
+       }
 
-        for (var i = 0; i < stuff.length; i++) {
-            if (stuff[i].type === "entertainment") {
-                entertainmentFilter.push(stuff[i]);
-            }
-        }
-
-
-
-       console.log(stuff);
        console.log(entertainmentFilter);
+       console.log(stuff);
+        
 
 
        $(".budgetAmount").text(budget);
@@ -63,7 +64,6 @@ $(document).ready(function () {
         amountInput.val("");
     });
 
-    var entertainmentFilter = [];
 
 
 
