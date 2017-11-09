@@ -3,13 +3,21 @@ $(document).ready(function () {
     var typeInput;
     var nameInput;
     var amountInput;
-    var budget = 800;
+    var budget;
     var stuff = [];
     var categoryName;
     var entertainmentFilter = [];
 
-// open form and close form
-    $(".budgetAmount").text(budget);
+    // modal functionality
+    $("#modalButton").on("click", function(event){
+        budget = $("#initialBudget").val();
+        $(".budgetAmount").text(budget);
+        $("#budgetModal").css("display", "none");
+    });
+
+
+    // open form and close form
+
 
     $(".select").on("click", function(event){
         categoryName = $(this).attr("id");
@@ -22,8 +30,8 @@ $(document).ready(function () {
         $(".popOutForm").css("display", "none");
     });
 
-    // submit button
-    $("button").on("click", function(event){
+    // submit budget items button
+    $("#submit").on("click", function(event){
        typeInput = $("#typeInput");
        nameInput = $("#nameInput");
        amountInput = $("#amountInput");
@@ -50,7 +58,7 @@ $(document).ready(function () {
 
        console.log(entertainmentFilter);
        console.log(stuff);
-        
+
 
 
        $(".budgetAmount").text(budget);
