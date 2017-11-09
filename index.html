@@ -9,13 +9,21 @@
     <title>Budget Buddy</title>
 </head>
 <body>
-<nav class="budgetTotal">
+    <nav class="budgetTotal">
     <!-- fixed position, so that it displays remaining always -->
     <div class="userName">Your Budget</div>
     <div class="budgetAmount"></div>
 </nav>
+
 <!-- modal asking for weekly budget amount (on button click) -->
-<div class="budgetBreakdown">
+    <div id="budgetModal">
+        <div id="enterBudget">
+            <input id="initialBudget" type="number" placeholder="Enter your budget">
+        </div>
+    </div>
+
+<!-- budget information -->
+    <div class="budgetBreakdown">
     <!-- slide down forms should be...similar to the jQuery lab/table finder -->
     <!-- just one form but pulls value from the button pressed -->
     <div class="select" id="entertainment">Entertainment
@@ -35,16 +43,17 @@
         <div class="addButton"><i class="material-icons">rowing</i></div>
     </div>
 </div>
-<div class="budgetList"><div id="listText" ></div></div>
+    <div class="budgetList"><div id="listText" ></div></div>
 
 <!--  this is the pop out form-->
-<div class="popOutForm">
+    <div class="popOutForm">
     <p class="closeForm"><i class="material-icons">close</i></p>
     <input id="typeInput" type="text" placeholder="type">
     <input id="nameInput" type="text" placeholder="name">
     <input id="amountInput" type="number" placeholder="amount">
     <button type="button">SUBMIT</button>
 </div>
+
 </body>
 </html>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

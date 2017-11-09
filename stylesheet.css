@@ -39,7 +39,8 @@ nav {
     background-color: #D9D7C5;
     margin: 5%;
     width: 100%;
-    height: 200px;
+    min-height: 200px;
+    padding: 5px;
     border-radius: 2%;
     box-shadow: inset 0px 0px 68px -26px rgba(0,0,0,0.5);
 }
@@ -89,6 +90,33 @@ button:hover{
     margin-top: 10%;
     border-bottom: none;
 }
+
+/* budget modal */
+
+#budgetModal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+#enterBudget {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    width: 100%;
+    height: 100%;
+}
+
+#initialBudget {
+    border: 0;
+    background-color: transparent;
+    font-size: 28px;
+}
+
+
 @media screen and (min-width: 480px) {
 }
 

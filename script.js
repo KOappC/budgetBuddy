@@ -6,6 +6,7 @@ $(document).ready(function () {
     var budget = 800;
     var stuff = [];
     var categoryName;
+
 // open form and close form
     $(".budgetAmount").text(budget);
 
@@ -15,29 +16,28 @@ $(document).ready(function () {
         $("#typeInput").val(categoryName);
     });
 
+    // exit form
     $(".closeForm").on("click", function(event){
         $(".popOutForm").css("display", "none");
     });
 
+    // submit button
     $("button").on("click", function(event){
        typeInput = $("#typeInput");
        nameInput = $("#nameInput");
        amountInput = $("#amountInput");
 
-
        // displaying text into div
-       $("#listText").append(typeInput.val() + " " + nameInput.val() + " $" + amountInput.val());
+       $("#listText").append("<p>" + typeInput.val() + " " + nameInput.val() + " $" + amountInput.val() +"</p>");
        $(".popOutForm").css("display", "none");
        budget -= amountInput.val();
 
-       //pushing form object into stuff array
+       // pushing form object into stuff array
        stuff.push({
            name: nameInput.val(),
            amount: amountInput.val(),
            type: typeInput.val()
        });
-
-       console.log(stuff);
 
 
        $(".budgetAmount").text(budget);
