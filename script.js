@@ -59,7 +59,27 @@ $(document).ready(function () {
     $("#closeOtherTotal").on("click", function(){
         $("#otherFilter").css("display", "none");
     });
-  
+
+    //open total forms
+    $("#pleaseWork").on("click", function() {
+        $("#entertainmentFilter").css("display", "flex");
+    });
+
+    $("#foodOpen").on("click", function() {
+        $("#foodFilter").css("display", "flex");
+    });
+
+    $("#clothesOpen").on("click", function() {
+        $("#clothingFilter").css("display", "flex");
+    });
+
+    $("#billsOpen").on("click", function() {
+        $("#billsFilter").css("display", "flex");
+    });
+
+    $("#otherOpen").on("click", function() {
+        $("#otherFilter").css("display", "flex");
+    });
 
     // submit budget items button
     $("#submit").on("click", function(){
@@ -112,7 +132,7 @@ $(document).ready(function () {
            });
            $("#clothingFilter").append("<li>" + nameInput.val() + amountInput.val() + "</li>");
            totalClothing += Number(amountInput.val());
-           $("totalClothing").text("$" + totalClothing);
+           $("#totalClothing").text("$" + totalClothing);
        }
 
        // bills filter

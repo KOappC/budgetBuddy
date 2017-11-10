@@ -40,6 +40,20 @@ nav {
     margin-bottom: 2%;
 }
 
+.entBreakdown {
+    display: flex;
+    font-family: 'Rubik', sans-serif;
+    font-size: 24px;
+    color: #FFFFBB;
+    justify-content: space-between;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 2%;
+}
+
+
+
+
 /*LIST STYLES*/
 
 .budgetList {
@@ -217,7 +231,7 @@ button:hover{
   right: 27px;
 }
 
-#closeEntertainmentTotal, #closeFoodTotal, #closeClothingTotal, #closeBillsTotal, #closeOtherTotal:hover{
+#closeEntertainmentTotal:hover, #closeFoodTotal:hover, #closeClothingTotal:hover, #closeBillsTotal:hover, #closeOtherTotal:hover{
   color: red;
 }
 
