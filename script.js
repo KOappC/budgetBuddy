@@ -117,7 +117,6 @@ $(document).ready(function () {
             $("#totalOther").text("$" + totalOther);
         }
 
-       console.log(entertainmentFilter);
 
 
        $(".budgetAmount").text(budget);

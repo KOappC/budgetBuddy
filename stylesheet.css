@@ -254,6 +254,10 @@ button:hover{
     font-size: 28px;
 }
 
+.filterButtons {
+    display: flex;
+    flex-direction: column;
+}
 
 @media screen and (min-width: 480px) {
 }
