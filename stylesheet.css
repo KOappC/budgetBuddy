@@ -7,6 +7,11 @@ body {
     font-family: 'Rubik', sans-serif;
 }
 
+h3{
+    padding: 11px;
+}
+
+
 nav {
     display: flex;
     align-items: center;
@@ -203,6 +208,17 @@ button:hover{
     top: -12px;
     right: 5px;
     font-family: Material Icons;
+}
+
+#closeEntertainmentTotal, #closeFoodTotal, #closeClothingTotal, #closeBillsTotal, #closeOtherTotal{
+  text-align: right;
+  position: absolute;
+  top: -16px;
+  right: 27px;
+}
+
+#closeEntertainmentTotal, #closeFoodTotal, #closeClothingTotal, #closeBillsTotal, #closeOtherTotal:hover{
+  color: red;
 }
 
 #typeInput{

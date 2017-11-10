@@ -34,10 +34,32 @@ $(document).ready(function () {
         $("#typeInput").val(categoryName);
     });
 
-    // exit form
+    // exit popOutForm
     $(".closeForm").on("click", function(){
         $(".popOutForm").css("display", "none");
     });
+  
+    //exit total forms
+    $("#closeEntertainmentTotal").on("click", function(){
+        $("#entertainmentFilter").css("display", "none");
+    });
+  
+    $("#closeFoodTotal").on("click", function(){
+        $("#foodFilter").css("display", "none");
+    });
+  
+    $("#closeClothingTotal").on("click", function(){
+        $("#clothingFilter").css("display", "none");
+    });
+  
+    $("#closeBillsTotal").on("click", function(){
+        $("#billsFilter").css("display", "none");
+    });
+  
+    $("#closeOtherTotal").on("click", function(){
+        $("#otherFilter").css("display", "none");
+    });
+  
 
     // submit budget items button
     $("#submit").on("click", function(){
