@@ -71,6 +71,11 @@ nav {
     box-shadow: inset 0px 0px 68px -26px rgba(0,0,0,0.5);
 }
 
+#listText p {
+    padding-top: 0;
+    padding-left: 5%;
+}
+
 /* entertainment filter */
 
 #entertainmentFilter {
@@ -278,6 +283,10 @@ button:hover{
     height: 60px;
 }
 
+#modalButton {
+    font-size: 20px;
+}
+
 #initialBudget {
     border: 0;
     background-color: transparent;
@@ -287,6 +296,19 @@ button:hover{
 .filterButtons {
     display: flex;
     flex-direction: column;
+}
+
+/* filter icons */
+
+#entertainmentOpen, #foodOpen, #clothesOpen, #billsOpen, #otherOpen {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 20px;
+    color: #FFFFBB;
+}
+
+#entertainmentOpen:hover, #foodOpen:hover, #clothesOpen:hover, #billsOpen:hover, #otherOpen:hover {
+    color: gray;
 }
 
 @media screen and (min-width: 480px) {

@@ -61,7 +61,7 @@ $(document).ready(function () {
     });
 
     //open total forms
-    $("#pleaseWork").on("click", function() {
+    $("#entertainmentOpen").on("click", function() {
         $("#entertainmentFilter").css("display", "flex");
     });
 
@@ -88,7 +88,7 @@ $(document).ready(function () {
        amountInput = $("#amountInput");
 
        // displaying text into div
-       $("#listText").append("<p>" + typeInput.val() + " " + nameInput.val() + " $" + amountInput.val() +"</p>");
+       $("#listText").append("<p><em><strong>" + typeInput.val() + "</strong></em> " + nameInput.val() + " $" + amountInput.val() +"</p>");
        $(".popOutForm").css("display", "none");
        budget -= amountInput.val();
 
