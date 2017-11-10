@@ -312,6 +312,71 @@ button:hover{
 }
 
 @media screen and (min-width: 480px) {
+
+    nav {
+        font-size: 42px;
+    }
+
+    #entertainment, #food, #clothing, #bills, #other {
+        font-size: 32px;
+    }
+
+    .entBreakdown {
+        font-size: 32px;
+    }
+
+    #modalButton {
+        font-size: 26px;
+    }
+
+    #initialBudget {
+        font-size: 32px;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+
+    body{
+        margin: 0 auto;
+        max-width: 800px;
+    }
+
+    .budgetBreakdown {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .budgetBreakdown .select {
+        width: 35%;
+    }
+
+    #entertainmentFilter {
+
+    }
+
+    #listText {
+        width: 90%;
+    }
+
+    #budgetModal {
+        right: -20%;
+        top: 0;
+        width: 300%;
+        height: 300%;
+    }
+
+    #enterBudget {
+        right: 2%;
+        width: 95%;
+    }
+
+    #modalButton {
+        
+    }
+
 }
 
 /*im in here making changes, y'all - CG*/
+/*get out of my head! - KA*/

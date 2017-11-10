@@ -172,6 +172,10 @@ $(document).ready(function () {
         nameInput.val("");
         amountInput.val("");
 
+        if (budget < 0) {
+            $(".budgetBreakdown").css("display", "none");
+        }
+
     });
 
 
