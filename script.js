@@ -62,23 +62,23 @@ $(document).ready(function () {
 
     //open total forms
     $("#entertainmentOpen").on("click", function() {
-        $("#entertainmentFilter").css("display", "flex");
+        $("#entertainmentFilter").slideToggle(1000);
     });
 
     $("#foodOpen").on("click", function() {
-        $("#foodFilter").css("display", "flex");
+        $("#foodFilter").slideToggle(1000);
     });
 
     $("#clothesOpen").on("click", function() {
-        $("#clothingFilter").css("display", "flex");
+        $("#clothingFilter").slideToggle(1000);
     });
 
     $("#billsOpen").on("click", function() {
-        $("#billsFilter").css("display", "flex");
+        $("#billsFilter").slideToggle(1000);
     });
 
     $("#otherOpen").on("click", function() {
-        $("#otherFilter").css("display", "flex");
+        $("#otherFilter").slideToggle(1000);
     });
 
     // submit budget items button
@@ -88,7 +88,7 @@ $(document).ready(function () {
        amountInput = $("#amountInput");
 
        // displaying text into div
-       $("#listText").append("<p><em><strong>" + typeInput.val() + "</strong></em> " + nameInput.val() + " $" + amountInput.val() +"</p>");
+       $("#listText").append("<p><em><strong>" + typeInput.val() + "</strong></em> " + nameInput.val() + ": $" + amountInput.val() +"</p>");
        $(".popOutForm").css("display", "none");
        budget -= amountInput.val();
 
