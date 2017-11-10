@@ -8,28 +8,34 @@ $(document).ready(function () {
     var categoryName;
     var entertainmentFilter = [];
     var totalEntertainment = 0;
+    var foodFilter = [];
+    var totalFood = 0;
+    var clothingFilter = [];
+    var totalClothing = 0;
+    var billsFilter = [];
+    var totalBills = 0;
+    var otherFilter = [];
+    var totalOther = 0;
 
 
 
     // modal functionality
-    $("#modalButton").on("click", function(event){
+    $("#modalButton").on("click", function(){
         budget = $("#initialBudget").val();
-        $(".budgetAmount").text(budget);
+        $(".budgetAmount").text("$" + budget);
         $("#budgetModal").css("display", "none");
     });
 
 
     // open form and close form
-
-
-    $(".select").on("click", function(event){
+    $(".select").on("click", function(){
         categoryName = $(this).attr("id");
         $(".popOutForm").css("display","flex");
         $("#typeInput").val(categoryName);
     });
 
     // exit form
-    $(".closeForm").on("click", function(event){
+    $(".closeForm").on("click", function(){
         $(".popOutForm").css("display", "none");
     });
 
@@ -51,8 +57,9 @@ $(document).ready(function () {
            type: typeInput.val()
        });
 
-       if(typeInput.val() === "entertainment"){
-           entertainmentFilter.push({
+       // entertainment filter
+       if(typeInput.val() === "entertainment") {
+           entertainmentFilter.push( {
                name: nameInput.val(),
                amount: amountInput.val(),
                type: typeInput.val()
@@ -61,6 +68,54 @@ $(document).ready(function () {
            totalEntertainment += Number(amountInput.val());
            $("#totalEntertainment").text("$" + totalEntertainment);
        }
+
+       // food filter
+        if(typeInput.val() === "food") {
+           foodFilter.push( {
+               name: nameInput.val(),
+               amount: amountInput.val(),
+               type: typeInput.val()
+           });
+           $("#foodFilter").append("<li>" + nameInput.val() + " " + amountInput.val() + "</li>");
+           totalFood += Number(amountInput.val());
+           $("#totalFood").text("$" + totalFood);
+        }
+
+       // clothing filter
+       if(typeInput.val() === "clothing") {
+           clothingFilter.push( {
+               name: nameInput.val(),
+               amount: amountInput.val(),
+               type: typeInput.val()
+           });
+           $("#clothingFilter").append("<li>" + nameInput.val() + amountInput.val() + "</li>");
+           totalClothing += Number(amountInput.val());
+           $("totalClothing").text("$" + totalClothing);
+       }
+
+       // bills filter
+        if(typeInput.val() === "bills") {
+            billsFilter.push( {
+                name: nameInput.val(),
+                amount: amountInput.val(),
+                type: typeInput.val()
+            });
+            $("#billsFilter").append("<li>" + nameInput.val() + " " + amountInput.val() + "</li>");
+            totalBills += Number(amountInput.val());
+            $("#totalBills").text("$" + totalBills);
+        }
+
+        // other filter
+        if(typeInput.val() === "other") {
+            otherFilter.push( {
+                name: nameInput.val(),
+                amount: amountInput.val(),
+                type: typeInput.val()
+            });
+            $("#otherFilter").append("<li>" + nameInput.val() + " " + amountInput.val() + "</li>");
+            totalOther += Number(amountInput.val());
+            $("#totalOther").text("$" + totalOther);
+        }
 
        console.log(entertainmentFilter);
 
@@ -72,13 +127,10 @@ $(document).ready(function () {
            $(".budgetAmount").css("color", "red");
        }
 
-
-
         typeInput.val("");
         nameInput.val("");
         amountInput.val("");
 
-        console.log(totalEntertainment);
     });
 
 
