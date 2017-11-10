@@ -257,9 +257,9 @@ button:hover{
         font-size: 32px;
     }
 
-    .popOutForm {
-        width: 45%;
-    }
+    /*.popOutForm {*/
+        /*width: 45%;*/
+    /*}*/
 
     #modalButton {
         font-size: 26px;
@@ -312,6 +312,10 @@ button:hover{
 
     .budgetBreakdown .select {
         width: 35%;
+    }
+
+    .popOutForm{
+        max-width: 450px;
     }
 
 
